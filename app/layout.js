@@ -5,11 +5,15 @@ import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Chatbot from '@components/Chatbot';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   const [query, setQuery] = useState(true);
+  const [chat, setChat] = useState(false);
+  const [messages, setMessages] = useState([]);
+
   return (
     <html lang="en" className='cursor'>
       <body>
@@ -37,15 +41,21 @@ export default function RootLayout({ children }) {
                     src='/waving-emoji.png'
                     width={54}
                     height={54}
+                    alt='emoji'
                     className='mt-2'
                   />
                 </div>
                 <p className='mt-6'>How can we help you?</p>
                 <div className='flex-center mt-8'>
-                  <Link href='/predict' onClick={()=> setQuery(true)} className='mr-7 chatbot-button'>Predict Diabetes Risk</Link>
-                  <button className='chatbot-button'>Ask A Question</button>
+                  <Link href='/predict' onClick={() => setQuery(true)} className='mr-7 chatbot-button'>Predict Diabetes Risk</Link>
+                  <button className='chatbot-button' onClick={() => {setChat(true)}}>Ask A Question</button>
                 </div>
               </div>
+          }
+          {
+            chat?
+              <Chatbot setChat={setChat} setQuery={setQuery} messages={messages} setMessages={setMessages} /> :
+              <div></div>
           }
         </section>
         {children}
