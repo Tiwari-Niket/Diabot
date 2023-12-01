@@ -33,7 +33,7 @@ export default function Home() {
           <div className="feature-1 md:mr-10">
             <h1>Have a question?<br /><span className="red">Chat with our AI assistant.</span></h1><br />
             <p>
-              India has been dubbed the "<strong>diabetes capital of the world</strong>". Many people are unaware of the risk factors and may not recognise the signs until the disease has progressed to a critical stage.
+              India has been dubbed the &quot;<strong>diabetes capital of the world</strong>&quot;. Many people are unaware of the risk factors and may not recognise the signs until the disease has progressed to a critical stage.
               <br /><br />Get instant answers to your diabetes related questions with our 24/7 available AI chatbot.
             </p>
           </div>
@@ -79,6 +79,7 @@ export default function Home() {
       <div className="my-20 flex-center">
         <Image
           src="/Line.png"
+          alt="straight-line"
           width={300}
           height={200}
         />
@@ -92,6 +93,7 @@ export default function Home() {
           <div className="flex-center">
             <Image
               src="/doctor.png"
+              alt="doctor"
               width={156}
               height={156}
               className="mt-52 absolute"
@@ -106,6 +108,7 @@ export default function Home() {
       <div className="my-20 flex-center">
         <Image
           src="/Line.png"
+          alt="straight-line"
           width={300}
           height={200}
         />
