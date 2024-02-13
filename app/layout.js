@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         <section>
-          <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+          <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" async/>
           <df-messenger
             intent="WELCOME"
             chat-title="Diabot-test"
